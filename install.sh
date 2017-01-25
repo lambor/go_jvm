@@ -9,7 +9,7 @@ CURDIR=`pwd`
 OLDGOPATH="$GOPATH"
 export GOPATH="$CURDIR"
 
-gofmt  src
+# gofmt  src
 
 go install $1
 
