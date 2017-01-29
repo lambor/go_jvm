@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 import "strings"
-import "ch02/classpath"
+import "ch03/classpath"
 
 func main() {
 	cmd := parseCmd()
