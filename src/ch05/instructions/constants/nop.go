@@ -1,9 +1,15 @@
 package constants
-import "ch05/instructions/base"
-import "ch05/rtda"
 
-type NOP struct {
+import (
+	"ch05/rtda"
+	"ch05/instructions/base"
+)
+
+// Do nothing
+type NOP struct{
 	base.NoOperandsInstruction
 }
 
-func (self *NOP) Execute(frame *rtda.Frame) {}
+func (self *NOP) Execute(frame *rtda.Frame) {
+	// really do nothing
+}

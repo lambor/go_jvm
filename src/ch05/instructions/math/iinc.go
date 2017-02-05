@@ -1,6 +1,11 @@
 package math
-import "ch05/instructions/base"
-import "ch05/rtda"
+
+import (
+	"ch05/rtda"
+	"ch05/instructions/base"
+)
+
+// Increment local variable by constant
 type IINC struct {
 	Index uint
 	Const int32
@@ -12,8 +17,8 @@ func (self *IINC) FetchOperands(reader *base.BytecodeReader) {
 }
 
 func (self *IINC) Execute(frame *rtda.Frame) {
-	localVars:=frame.LocalVars()
-	val:=localVars.GetInt(self.Index)
-	val+=self.Const
-	localVars.SetInt(self.Index,val)
+	localVars := frame.LocalVars()
+	val := localVars.GetInt(self.Index)
+	val += self.Const
+	localVars.SetInt(self.Index, val)
 }
