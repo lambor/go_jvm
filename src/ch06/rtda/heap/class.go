@@ -53,3 +53,10 @@ func (self *Class) IsAnnotation() bool {
 func (self *Class) IsEnum() bool {
     return 0 != self.accessFlags&ACC_ENUM
 }
+
+func newObject(class *Class) *Object {
+	return &Object{
+		class: class,
+		fields:newSlots(class.instanceSlotCount),
+	}
+}

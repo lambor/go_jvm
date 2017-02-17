@@ -2,6 +2,7 @@ package heap
 import "ch06/classfile"
 type Field struct {
 	ClassMember
+	slotId uint
 }
 
 func newFields(class *Class, cfFields []*classfile.MemberInfo) []*Field {
