@@ -18,7 +18,6 @@ func (self *LDC_W) Execute(frame *rtda.Frame) {
 }
 
 func _ldc(frame *rtda.Frame, index uint) {
-	/*
 	stack := frame.OperandStack()
 	cp := frame.Method().Class().ConstantPool()
 	c := cp.GetConstant(index)
@@ -34,14 +33,12 @@ func _ldc(frame *rtda.Frame, index uint) {
 	default:
 		panic("todo: ldc!")
 	}
-	*/
 }
 
 // Push long or double from run-time constant pool (wide index)
 type LDC2_W struct{ base.Index16Instruction }
 
 func (self *LDC2_W) Execute(frame *rtda.Frame) {
-	/*
 	stack := frame.OperandStack()
 	cp := frame.Method().Class().ConstantPool()
 	c := cp.GetConstant(self.Index)
@@ -54,5 +51,4 @@ func (self *LDC2_W) Execute(frame *rtda.Frame) {
 	default:
 		panic("java.lang.ClassFormatError")
 	}
-	*/
 }
